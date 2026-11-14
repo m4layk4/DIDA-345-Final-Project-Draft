@@ -1,4 +1,4 @@
--<!DOCTYPE html?>
+<!DOCTYPE html?>
 <head>
   <title>Final Project Draft</title>
   <meta charset = "UTF-8">
@@ -20,13 +20,20 @@
       margin-bottom: 30px;
       text-align: center;
 }
+    html {
+      scroll-behavior: smooth;
+}
+    .story-step {
+      scroll-margin-top: 100px;
+}
+
   
 
     body {
       background-color: #F5EBD7;
       color: #000000;
       margin: 0;
-      color: #c9d1d9;
+      color: #000080;
       font-family: 'Yatra One', cursive;
 }
     .urdu-title {
@@ -140,6 +147,22 @@
       text-decoration: underline;
       text-underline-offset: 6px;
 }
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  
+      background-color: #F5EBD7;
+      padding: 18px 25px;
+  
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+  
+      border-bottom: 1px solid #D4AF37;
+}
+
     footer {
       text-align: center;
       padding: 40px;
@@ -185,45 +208,57 @@
       <p id="story-label">A Province of Contrasts</p>
     </div>
     <div class="story-text">
-      <div class="story-step" data-number="01"
-        data-label="A Province of Contrasts">
-        <h2>One Province. Many Realities.</h2>
-        <p>Punjab is home to districts with differenteconomic and social conditions.</p>
+      <div class="story-step"
+        id="agriculture"
+        data-number="01"
+        data-label="Agriculture">
+        <h2>Agriculture</h2>
+        <p>Explore agriculture across Punjab.</p>
       </div>
-      <div class="story-step" data-number="02"
+      <div class="story-step"
+        id="education"
+        data-number="02"
         data-label="Education">
-        <h2>Who Has Access to Education?</h2>
-        <p>Explore how educational opportunities differ across Punjab's districts.</p>
+        <h2>Education</h2>
+        <p>Explore education across Punjab.</p>
       </div>
-      <div class="story-step" data-number="03"
-        data-label="Healthcare">
-        <h2>Access to Healthcare</h2>
-        <p>What differences exist in healthcare access between districts?</p> 
+      <div class="story-step"
+        id="health"
+        data-number="03"
+        data-label="Health">
+        <h2>Health</h2>
+        <p>Explore healthcare across Punjab.</p>
       </div>
+      <div class="story-step"
+        id="population"
+        data-number="04"
+        data-label="Population">
+        <h2>Population</h2>
+        <p>Explore population differences across Punjab.</p>
+      </div>
+      <div class="story-step"
+        id="industry"
+        data-number="05"
+        data-label="Industry">
+        <h2>Industry</h2>
+        <p>Explore different industries across Punjab.</p>
+      </div>
+      <div class="story-step"
+        id="public-finance"
+        data-number="05"
+        data-label="Public Finance">
+        <h2>Public Finance</h2>
+        <p>Explore public finance across Punjab.</p>
+      </div>
+
+      
+
+       
+
     </div>
-  </div>
+</div>
 
-
-  <section id="agriculture">
-    <h2>Agriculture</h2>
-  </section>
- <section id="education">
-    <h2>Education</h2>
-  </section>
-   <section id="health">
-    <h2>Health</h2>
-  </section>
-   <section id="population">
-    <h2>Population</h2>
-  </section>
-   <section id="industry">
-    <h2>Industry</h2>
-  </section>
-  <section id="public-finance">
-    <h2>Public Finance</h2>
-  </section>
-
-
+  
 
 
 
