@@ -20,6 +20,7 @@
       margin-bottom: 30px;
       text-align: center;
 }
+  
 
     body {
       background-color: #F5EBD7;
@@ -45,6 +46,47 @@
       text-shadow: #D4AF37;
       margin-top: 80px;
     }
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1200px;
+      margin: auto;
+      gap: 50px;
+}
+    .story-visual {
+      position: sticky;
+      top: 20vh;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+    #story-number {
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(100px, 15vw, 200px);
+      color: #01411C;
+      transition: opacity 0.4s;
+  }
+    #story-label {
+      color: #8B3A3A;
+      font-size: 24px;
+      text-align: center;
+}
+    .story-step {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+    .story-step h2 {
+      font-size: 36px;
+      color: #8B3A3A;
+}
+    .story-step p {
+      font-size: 20px;
+      line-height: 1.7;
+}
 
 
 
@@ -137,6 +179,30 @@
     <a href="#industry">Industry</a>
     <a href="#public-finance">Public Finance</a>
   </nav>
+  <div class="story-layout">
+    <div class="story-visual">
+      <div id="story-number">01</div>
+      <p id="story-label">A Province of Contrasts</p>
+    </div>
+    <div class="story-text">
+      <div class="story-step" data-number="01"
+        data-label="A Province of Contrasts">
+        <h2>One Province. Many Realities.</h2>
+        <p>Punjab is home to districts with differenteconomic and social conditions.</p>
+      </div>
+      <div class="story-step" data-number="02"
+        data-label="Education">
+        <h2>Who Has Access to Education?</h2>
+        <p>Explore how educational opportunities differ across Punjab's districts.</p>
+      </div>
+      <div class="story-step" data-number="03"
+        data-label="Healthcare">
+        <h2>Access to Healthcare</h2>
+        <p>What differences exist in healthcare access between districts?</p> 
+      </div>
+    </div>
+  </div>
+
 
   <section id="agriculture">
     <h2>Agriculture</h2>
@@ -171,6 +237,21 @@
 
 
   <script>
+    const steps = document.querySelectorAll('.story-step');
+    const number = document.getElementById('story-number');
+    const label = document.getElementById('story-label');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          number.textContent = entry.target.dataset.number;
+          label.textContent = entry.target.dataset.label;
+        }
+    });
+}, {
+      threshold: 0.5
+});
+    steps.forEach(step => observer.observe(step));
+
 
 
 
