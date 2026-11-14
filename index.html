@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="style.css">
   <script src = "https://cdn.jsdelivr.net/npm/chart.js@4"> </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     
     .chart-container {
@@ -89,59 +90,6 @@
       text-underline-offset: 6px;
 }
 
-
-
-    
-    
-    .tech-symbols {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-}
-    .tech-symbols span {
-      position: absolute;
-      font-size: 35px;
-      color: #3FB950;
-      opacity: 0.6;}
-    .tech-symbols span:nth-child(1) {
-      top: 15%;
-      left: 15%;
-    }
-    .tech-symbols span:nth-child(2) {
-      top: 35%;
-      right: 15%;}
-    .tech-symbols span:nth-child(3) {
-      top: 65%;
-      left: 15%;
-}
-    .tech-symbols span:nth-child(4) {
-      top: 80%;
-      right: 15%;
-}
-    .tech-symbols span:nth-child(5) {
-      top: 85%;
-      left: 15%;
-}
-    .tech-symbol {
-    position: fixed;
-    font-size: 30px;
-    color: #151B54;
-    pointer-events: none;
-    z-index: 0;
-}
-    .tech-symbol.left {
-    left: 10px;
-}
-    .tech-symbol.right {
-    right: 10px;
-}
-    section {
-    padding: 50px 120px;
-    font-size: 20px;
-}
-  
-}
     .text-text {
       font-size: 18px;
       color: #F8F8F8;
@@ -222,7 +170,9 @@
   </nav>
 
   <section id="agriculture">
-    <h2>Agriculture</h2>
+    <h2>
+      <i data-lucide="wheat"></i>
+      Agriculture</h2>
   </section>
  <section id="education">
     <h2>Education</h2>
@@ -269,8 +219,9 @@
 
 
   </script>
-
-
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
